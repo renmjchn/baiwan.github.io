@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>our home</title>
+<link rel="stylesheet" type="text/css" href="files/mystyle.css" charset="utf-8">
+</link>
+<script type="text/javascript" src="files/clock.js"></script>
+<script>	
+	</script>
+<style id="css">
+#wrap {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 130px;
+	top: 20px;
+}
+ul {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+	list-style: none;
+}
+li {
+	position: absolute;
+	width: 2px;
+	height: 6px;
+	background: #000;
+	left: 50px;
+	top: 0px;
+	transform-origin: center 50px;
+}
+li:nth-of-type(5n+1) {
+	height: 12px;
+}
+#hour {
+	position: absolute;
+	left: 43px;
+	top: 13px;
+	width: 3px;
+	height: 45px;
+	background: #000;
+	transform-origin: bottom;
+}
+#min {
+	width: 2px;
+	height: 40px;
+	background: #999;
+	position: absolute;
+	left: 48px;
+	top: 10px;
+	transform-origin: bottom;
+}
+#sec {
+	width: 1px;
+	height: 45px;
+	background: red;
+	position: absolute;
+	left: 49px;
+	top: 5px;
+	transform-origin: bottom;
+}
+.icon {
+	width: 20px;
+	height: 20px;
+	background: #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+}
+</style>
+</head>
+
+<body onLoad="startTime()">
+<div id="wrap">
+  <ul id="list">
+  </ul>
+  <div id="hour"></div>
+  <div id="min"></div>
+  <div id="sec"></div>
+  <div class="icon"></div>
+</div>
+<script>
+		var oList=document.getElementById("list");
+			var oCss=document.getElementById("css");
+			var oHour=document.getElementById("hour");
+			var oMin=document.getElementById("min");
+			var oSec=document.getElementById("sec");
+			var oLi="";
+			var sCss="";
+			for (var i=0;i<60;i++){sCss+="li:nth-of-type(" + (i+1) + "){transform:rotate(" + i*6 + "deg);}";
+								  oLi+="<li></li>";};
+			oList.innerHTML=oLi;
+			oCss.innerHTML+=sCss;
+			
+			
+			
+			function toTime(){var oDate=new Date();
+			var iSec=oDate.getSeconds();
+			var iMin=oDate.getMinutes() + iSec / 60;
+			var iHour=oDate.getHours() + iMin /60;
+							 oSec.style.WebkitTransform="rotate(" + iSec*6 + "deg)";
+							 oMin.style.WebkitTransform="rotate(" + iMin*6 + "deg)";
+							 oHour.style.WebkitTransform="rotate(" + iHour*30 + "deg)";};
+			toTime;
+			setInterval(toTime,1000);
+			
+			
+			
+		
+		
+		</script>
+<div id="anim">Hello</div>
+<h1>任智慧和谢小宝的小窝</h1>
+<div id="txt"></div>
+<p id="navi"><span id="navigator">导航</span><span><a id="love-link" href="love_xie/index.html">爱心</a></span><span id="about"><a href="99days/index.html">99天</a></span><span id="birthday"><a href="birthday/index.html">生日</a></span></p>
+</body>
+</html>
