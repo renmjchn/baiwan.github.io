@@ -88,18 +88,18 @@ left: 240px;
 }
  50% {
  transform: rotate(0deg);
-left: 1000px;
+left: 900px;
  top: 5px;
 }
  55% {
  transform: rotate(0deg);
-left: 1000px;
+left: 900px;
  top: 5px;
 }
 70% {
 background: #1ec7e6;
  transform: rotate(0deg);
-left: 1000px;
+left: 900px;
  top: 5px;
 }
  100% {
