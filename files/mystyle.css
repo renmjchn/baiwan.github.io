@@ -45,6 +45,11 @@ video {
 	display: block;
 }
 
+img {
+	display: block;
+	margin: 0 auto;
+  }
+
 /*div {
 	border-color: aqua
 }*/
@@ -94,8 +99,7 @@ left: 1000px;
 70% {
 background: #1ec7e6;
  transform: rotate(0deg);
-left: 100
-	0px;
+left: 1000px;
  top: 5px;
 }
  100% {
